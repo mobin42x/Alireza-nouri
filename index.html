@@ -11,33 +11,35 @@
       padding: 100px;
       direction: rtl;
     }
-
     h1 {
       color: #bc6c25;
-      font-size: 6rem;
-      margin-bottom: 40px;
+  h1 {
+  font-size: 2rem;
+}
+p, button, span {
+  font-size: 1.2rem;
+}
     }
-
-    p {
-      font-size: 3rem;
-      color: #6c584c;
-      margin-bottom: 60px;
+    .control {
+      margin-top: 60px;
     }
-
+    .play-button {
+      font-size: 1.2em;
+      padding: 20px 40px;
+      background-color: #dda15e;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      color: white;
+    }
+    .play-button:hover {
+      background-color: #bc6c25;
+    }
     #congrats-img {
       margin-top: 80px;
       display: none;
-      max-width: 600px;
+      max-width: 300px;
       border-radius: 24px;
-    }
-
-    .play-button {
-      font-size: 2rem;
-      padding: 0;
-      background: none;
-      border: none;
-      color: #bc6c25;
-      cursor: pointer;
     }
   </style>
 </head>
@@ -46,11 +48,17 @@
   <h1>آقا سلام 👋🏻</h1>
   <p>شنیدیم فرهنگیان دراومدی... باریکلا! 🎓</p>
 
-  <button class="play-button" id="playBtn">✋🏻 بزن قدش</button>
+<img id="congrats-img" src="Alireza-and-me.jpg" alt="تبریک !" />
 
-  <img id="congrats-img" src="Alireza-and-me.jpg" alt="تبریک!" />
+<div class="control">
+  <button class="play-button"></button>
+</div>
 
-  <audio id="audio" src="your-audio.mp3"></audio>
+  <div class="control">
+    <button class="play-button" id="playBtn">✋🏻بزن قدش</button>
+  </div>
+
+  <img id="congrats-img" src="your-image.jpg" alt="تبریک!" />
 
   <script>
     const playBtn = document.getElementById('playBtn');
@@ -60,9 +68,11 @@
     playBtn.onclick = function () {
       if (audio.paused) {
         audio.play();
+        this.textContent = 'آقا تبریک برکاننا';
         img.style.display = 'block';
       } else {
         audio.pause();
+        this.textContent = '✋🏻بزن قدش';
         img.style.display = 'none';
       }
     };
@@ -70,3 +80,4 @@
 
 </body>
 </html>
+کل اصلاحات رو اعمال کن
