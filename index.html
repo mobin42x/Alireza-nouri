@@ -76,6 +76,14 @@
       }
     };
   </script>
+    playBtn.onclick = function () {
+      if (audio.paused) {
+        audio.play();
+        this.textContent = ' 🎉🎈🎈🍰';
+        img.style.display = 'block';
+      } else {
+        audio.pause();
+        this.textContent = 'با انگشت بزن قدش ✋🏻';
 
 </body>
 </html>
