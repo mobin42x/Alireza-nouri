@@ -21,7 +21,7 @@
     p {
       font-size: 3rem;
       color: #6c584c;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
 
     #congrats-img {
@@ -44,26 +44,17 @@
 <body>
 
   <h1>آقا تبریک🎉🫀</h1>
-<p>داداش شنیدم از فرهنگیان در اومدی </p>
-  <p>تبریک عرض می نمایم <p>
-    <p>آقا براتون آرزوی موفقیت دارم <p>
-      <p>اصلا هم بخاطر اینکه بهتون بگم <p>
-        <p>سهم شیرینی منو نگه دارین این سایتو نزدم <p>
-          <p>🗿🍰🤣<p>
+  <p>داداش شنیدم از فرهنگیان در اومدی</p>
+  <p>تبریک عرض می‌نمایم</p>
+  <p>آقا براتون آرزوی موفقیت دارم</p>
+  <p>اصلاً هم بخاطر اینکه بهتون بگم</p>
+  <p>سهم شیرینی منو نگه دارین این سایتو نزدم</p>
+  <p>🗿🍰🤣</p>
 
   <button class="play-button" id="playBtn">با انگشت بزن قدش ✋🏻</button>
-  
 
   <img id="congrats-img" src="Alireza-and-me.jpg" alt="تبریک!" />
-  <style>
-  #congrats-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 600px;
-  border-radius: 24p
-}
- 
+
   <audio id="audio" src="your-audio.mp3"></audio>
 
   <script>
@@ -75,20 +66,14 @@
       if (audio.paused) {
         audio.play();
         img.style.display = 'block';
+        this.textContent = '🎉🎈🎈🍰';
       } else {
         audio.pause();
         img.style.display = 'none';
+        this.textContent = 'با انگشت بزن قدش ✋🏻';
       }
     };
   </script>
-    playBtn.onclick = function () {
-      if (audio.paused) {
-        audio.play();
-        this.textContent = ' 🎉🎈🎈🍰';
-        img.style.display = 'block';
-      } else {
-        audio.pause();
-        this.textContent = 'با انگشت بزن قدش ✋🏻';
 
 </body>
 </html>
