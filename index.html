@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 تبریک فرهنگیان</title>
+  <style>
+    body {
+      font-family: "Vazir", sans-serif;
+      background-color: #fefae0;
+      text-align: center;
+      padding: 50px;
+      direction: rtl;
+    }
+    h1 {
+      color: #bc6c25;
+      font-size: 2em;
+    }
+    .control {
+      margin-top: 30px;
+    }
+    .play-button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      background-color: #dda15e;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+    }
+    .play-button:hover {
+      background-color: #bc6c25;
+    }
+    #congrats-img {
+      margin-top: 40px;
+      display: none;
+      max-width: 300px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>آقا سلام 👋🏻</h1>
+  <p>شنیدیم فرهنگیان دراومدی... باریکلا! 🎓</p>
+
+  <div class="control">
+    <button class="play-button" id="playBtn">✋🏻بزن قدش</button>
+  </div>
+
+  <audio id="audio" src="your-audio-file.mp3"></audio>
+
+  <img id="congrats-img" src="your-image.jpg" alt="تبریک!" />
+
+  <script>
+    const playBtn = document.getElementById('playBtn');
+    const audio = document.getElementById('audio');
+    const img = document.getElementById('congrats-img');
+
+    playBtn.onclick = function () {
+      if (audio.paused) {
+        audio.play();
+        this.textContent = 'آقا تبریک برکاننا';
+        img.style.display = 'block';
+      } else {
+        audio.pause();
+        this.textContent = '✋🏻بزن قدش';
+        img.style.display = 'none';
+      }
+    };
+  </script>
+
+</body>
+</html>
